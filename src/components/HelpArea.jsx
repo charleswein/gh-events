@@ -19,6 +19,8 @@ const HELP_ITEMS = [
   },
 ];
 
+// TODO: Create a HelpArea component
+
 function HelpArea() {
   return (
     <section data-testid="help-area" id="help-area">
