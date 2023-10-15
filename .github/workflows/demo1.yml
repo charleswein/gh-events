@@ -2,13 +2,13 @@ name: Events Demo 1
 on:
   pull_request:
     types: [opened, synchronize, reopened]
-    branches: ['dev-*', 'feat/**'] # dev-new dev-this-is-a-new-feature or feat/new/feature
+    branches: ['main', 'dev-*', 'feat/**'] # dev-new dev-this-is-a-new-feature or feat/new/feature
   workflow_dispatch:
   push:
-    branches: ['dev-*', 'feat/**'] # dev-new dev-this-is-a-new-feature or feat/new/feature
+    branches: ['main', 'dev-*', 'feat/**'] # dev-new dev-this-is-a-new-feature or feat/new/feature
     # developer-1
     paths-ignore:
-      - '.github/workflows/*' # src/components/test.js
+      - '.github/workflows/*' # ignore .github/workflows/demo1.yml
 jobs:
   deploy:
     runs-on: ubuntu-latest
